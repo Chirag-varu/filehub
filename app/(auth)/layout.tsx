@@ -1,5 +1,5 @@
 import Image from "next/image";
-import logo from "../android-chrome-512x512.png";
+import logo from "../favicon_io/android-chrome-512x512.png";
 import file from "../../public/assets/images/files.png";
 
 const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
