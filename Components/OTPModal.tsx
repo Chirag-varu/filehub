@@ -20,6 +20,7 @@ import Image from "next/image";
 import { Button } from "@/Components/ui/button";
 import { verifySecret, sendEmailOTP } from "@/lib/actions/user.actions";
 import { useRouter } from "next/navigation";
+import toast from "react-hot-toast";
 
 const OtpModal = ({
     accountId,
@@ -37,16 +38,16 @@ const OtpModal = ({
         e.preventDefault();
         setIsLoading(true);
 
-        console.log({ accountId, password });
-
         try {
             const sessionId = await verifySecret({ accountId, password });
-
-            console.log({ sessionId });
+            toast('Welcome to FileHub', {
+                icon: '🗃️',
+            });
 
             if (sessionId) router.push("/");
         } catch (error) {
             console.log("Failed to verify OTP", error);
+            toast.error("Something went wrong try again!");
         }
 
         setIsLoading(false);
@@ -54,6 +55,7 @@ const OtpModal = ({
 
     const handleResendOtp = async () => {
         await sendEmailOTP({ email });
+        toast.success("OTP has been re-send to your email!");
     };
 
     return (

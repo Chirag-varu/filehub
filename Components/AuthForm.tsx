@@ -19,6 +19,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { createAccount, signInUser } from "@/lib/actions/user.actions";
 import OtpModal from "@/Components/OTPModal";
+import toast from "react-hot-toast";
 
 type FormType = "sign-in" | "sign-up";
 
@@ -51,14 +52,19 @@ const AuthForm = ({ type }: { type: FormType }) => {
     setErrorMessage("");
 
     try {
-      const user = await createAccount({
-        fullName: values.fullName || "",
-        email: values.email,
-      });
+      const user =
+        type === "sign-up"
+          ? await createAccount({
+            fullName: values.fullName || "",
+            email: values.email,
+          })
+          : await signInUser({ email: values.email });
 
       setAccountId(user.accountId);
+      toast.success("OTP send to your email");
     } catch {
       setErrorMessage("Failed to create account! Please try again.");
+      toast.error("Something went wrong try again!");
     } finally {
       setIsLoading(false);
     }
