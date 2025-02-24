@@ -37,21 +37,22 @@ const OtpModal = ({
     const handleSubmit = async (e: React.MouseEvent<HTMLButtonElement>) => {
         e.preventDefault();
         setIsLoading(true);
-
+    
         try {
             const sessionId = await verifySecret({ accountId, password });
-            toast('Welcome to FileHub', {
-                icon: '🗃️',
-            });
-
-            if (sessionId) router.push("/");
+            toast('Welcome to FileHub', { icon: '🗃️' });
+    
+            if (sessionId) {
+                setTimeout(() => router.push("/"), 1000 ); // ✅ Delays navigation until the next cycle
+            }
         } catch (error) {
             console.log("Failed to verify OTP", error);
             toast.error("Something went wrong try again!");
+        } finally {
+            setIsLoading(false);
         }
-
-        setIsLoading(false);
     };
+    
 
     const handleResendOtp = async () => {
         await sendEmailOTP({ email });
@@ -79,7 +80,7 @@ const OtpModal = ({
                     </AlertDialogDescription>
                 </AlertDialogHeader>
 
-                <InputOTP maxLength={6} value={password} onChange={setPassword}>
+                <InputOTP maxLength={6} value={password || ""} onChange={setPassword}>
                     <InputOTPGroup className="shad-otp">
                         <InputOTPSlot index={0} className="shad-otp-slot" />
                         <InputOTPSlot index={1} className="shad-otp-slot" />

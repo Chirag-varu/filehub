@@ -2,17 +2,13 @@
 
 import Link from "next/link";
 import { Button } from "@/Components/ui/button";
-import { useEffect } from "react";
-import toast from "react-hot-toast";
+// import { useEffect } from "react";
+// import toast from "react-hot-toast";
 import FuzzyText from '@/Components/FuzzyText';
 
 export default function page_not_found() {
     const enableHover = true; // Define enableHover variable
     const hoverIntensity = 0.5; // Define hoverIntensity variable
-
-    useEffect(() => {
-        toast.error("404 - Page Not Found!");
-    }, []);
 
     return (
         <>

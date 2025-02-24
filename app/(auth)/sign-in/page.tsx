@@ -1,3 +1,4 @@
+"use client";
 import AuthForm from '@/Components/AuthForm'
 
 const SignIn = () => {
