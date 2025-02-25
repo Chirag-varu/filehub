@@ -2,7 +2,7 @@
 
 FileHub is a web application that allows users to securely store, manage, and share their files and documents. With an intuitive interface and robust security features, FileHub makes file storage and collaboration seamless.
 
-LIve Link: https://filehub-cv.vercel.app/
+Working Link: https://filehub-cv.vercel.app/
 
 ## ✨ Features
 
