@@ -51,7 +51,7 @@ Open [http://localhost:3000](http://localhost:3000) in your browser to access th
 - `POST /api/files/share` – Share a file with a link.
 
 ## 🛠 Technologies Used
-- 🎨 **Frontend:** Next.js, TypeScript, Tailwind CSS
+- 🎨 **Frontend:** Next.js, TypeScript, Tailwind CSS, UI-Topia
 - 🖥️ **Backend:** appwrite
 
 ## 🤝 Contributing
