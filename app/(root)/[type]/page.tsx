@@ -1,4 +1,4 @@
-"use client"; // Ensure it's a Client Component
+"use client"; 
 
 import React, { useState, useEffect } from "react";
 import { useParams, useSearchParams } from "next/navigation";
@@ -12,8 +12,8 @@ import SkeletonForPage from "@/Components/SkeletonForPage";
 type FileType = "audio" | "video" | "image" | "other" | "document";
 
 const Page = () => {
-  const params = useParams(); // Unwrap params
-  const searchParams = useSearchParams(); // Unwrap searchParams
+  const params = useParams(); 
+  const searchParams = useSearchParams(); 
 
   const [files, setFiles] = useState<{ documents: Models.Document[]; total: number } | null>(null);
   const [loading, setLoading] = useState(true);

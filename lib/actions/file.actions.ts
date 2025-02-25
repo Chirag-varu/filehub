@@ -1,32 +1,6 @@
 "use server";
 
-interface RenameFileProps {
-  fileId: string;
-  name: string;
-  extension: string;
-  path: string;
-}
-
-interface UploadFileProps {
-  file: File;
-  ownerId: string;
-  accountId: string;
-  path: string;
-}
-
-interface DeleteFileProps {
-  fileId: string;
-  bucketFileId: string;
-  path: string;
-}
-
 import { createAdminClient, createSessionClient } from "@/lib/appwrite";
-
-interface UpdateFileUsersProps {
-  fileId: string;
-  emails: string[];
-  path: string;
-}
 import { InputFile } from "node-appwrite/file";
 import { appwriteConfig } from "@/lib/appwrite/config";
 import { ID, Models, Query } from "node-appwrite";

@@ -5,6 +5,8 @@ import Image from "next/image";
 import { navItems } from "@/constants";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
+import logo from "../public//favicon_io/android-chrome-512x512.png";
+import logo2 from "../public//favicon_io/apple-touch-icon.png";
 
 interface Props {
   fullName: string;
@@ -18,21 +20,18 @@ const Sidebar = ({ fullName, avatar, email }: Props) => {
   return (
     <aside className="sidebar">
       <Link href="/">
-        <Image
-          src="/assets/icons/logo-full-brand.svg"
-          alt="logo"
-          width={160}
-          height={50}
-          className="hidden h-auto lg:block"
-        />
-
-        <Image
-          src="/assets/icons/logo-brand.svg"
-          alt="logo"
-          width={52}
-          height={52}
-          className="lg:hidden"
-        />
+        <div className="flex items-center">
+          <Image src={logo} alt="logo" width={80} height={82}
+            className="hidden h-auto lg:block" />
+          <Image
+            src={logo2}
+            alt="logo"
+            width={52}
+            height={52}
+            className="lg:hidden"
+          />
+          <h1 className="h1 text-brand hidden lg:block">FileHub</h1>
+        </div>
       </Link>
 
       <nav className="sidebar-nav">

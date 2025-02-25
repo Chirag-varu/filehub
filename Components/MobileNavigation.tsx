@@ -16,6 +16,8 @@ import { cn } from "@/lib/utils";
 import { Button } from "@/Components/ui/button";
 import FileUploader from "@/Components/FileUploader";
 import { signOutUser } from "@/lib/actions/user.actions";
+import menu from "../public/assets/icons/menu.svg";
+import logo2 from "../public/favicon_io/apple-touch-icon.png";
 
 interface Props {
   $id: string;
@@ -37,18 +39,21 @@ const MobileNavigation = ({
 
   return (
     <header className="mobile-header">
-      <Image
-        src="/assets/icons/logo-full-brand.svg"
-        alt="logo"
-        width={120}
-        height={52}
-        className="h-auto"
-      />
+      <div className="flex items-center">
+        <Image
+          src={logo2}
+          alt="logo"
+          width={58}
+          height={50}
+          className="h-auto"
+        />
+        <h1 className="h2 text-brand block sm:hidden">FileHub</h1>
+      </ div>
 
       <Sheet open={open} onOpenChange={setOpen}>
         <SheetTrigger>
           <Image
-            src="/assets/icons/menu.svg"
+            src={menu}
             alt="Search"
             width={30}
             height={30}
