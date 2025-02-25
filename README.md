@@ -46,7 +46,7 @@ Open [http://localhost:3000](http://localhost:3000) in your browser to access th
 
 ## 🛠 Technologies Used
 - 🎨 **Frontend:** Next.js, TypeScript, Tailwind CSS
-- 🖥️ **Backend:** Node.js, Express.js
+- 🖥️ **Backend:** appwrite
 
 ## 🤝 Contributing
 We welcome contributions! If you’d like to contribute:
