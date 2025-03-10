@@ -61,7 +61,11 @@ const AuthForm = ({ type }: { type: FormType }) => {
           : await signInUser({ email: values.email });
 
       setAccountId(user.accountId);
-      toast.success("OTP send to your email");
+      if (user.accountId) {
+        toast.success("OTP send to your email");
+      } else {
+        toast.error("User not found, try to sign-up!");
+      }
     } catch {
       setErrorMessage("Failed to create account! Please try again.");
       toast.error("Something went wrong try again!");
