@@ -4,6 +4,8 @@ FileHub is a web application that allows users to securely store, manage, and sh
 
 Working Link: https://filehub-cv.vercel.app/
 
+---
+
 ## ✨ Features
 
 - 🔒 **Secure File Storage** – Upload and store files securely in the cloud.
@@ -19,6 +21,7 @@ Working Link: https://filehub-cv.vercel.app/
 ![Screenshot (102)](https://github.com/user-attachments/assets/b902262f-7c98-4d19-819f-1be8679d42ab)
 
 ---
+
 ## 🛠 Tech Stack  
 
 ### **Frontend**  
@@ -38,7 +41,8 @@ Working Link: https://filehub-cv.vercel.app/
 - **ESLint & Prettier** (Code Formatting & Linting)  
 - **PostCSS** (CSS Processing)  
 - **Sonner / React Hot Toast** (Notifications)  
-- **Use Debounce** (Optimized State Management)  
+- **Use Debounce** (Optimized State Management)
+
 ---
 
 ## 🚀 Getting Started
@@ -61,6 +65,8 @@ npm run dev  # or yarn dev
 
 Open [http://localhost:3000](http://localhost:3000) in your browser to access the app.
 
+---
+
 ## 📡 API Endpoints
 
 ### 🔐 Authentication
@@ -73,9 +79,13 @@ Open [http://localhost:3000](http://localhost:3000) in your browser to access th
 - `DELETE /api/files/:id` – Delete a file.
 - `POST /api/files/share` – Share a file with a link.
 
+---
+
 ## 🛠 Technologies Used
 - 🎨 **Frontend:** Next.js, TypeScript, Tailwind CSS, UI-Topia
 - 🖥️ **Backend:** appwrite
+
+---
 
 ## 🤝 Contributing
 We welcome contributions! If you’d like to contribute:
@@ -85,8 +95,12 @@ We welcome contributions! If you’d like to contribute:
 4. 📤 Push to the branch: `git push origin feature-branch`.
 5. 🔄 Open a Pull Request.
 
+---
+
 ## 📜 License
 This project is licensed under the [MIT License](LICENSE).
+
+---
 
 ## 📧 Contact
 For queries or feedback, feel free to reach out via [📩 email](mailto:chiragvaru0@gmail.com) or open an issue on GitHub.
