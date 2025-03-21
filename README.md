@@ -18,6 +18,29 @@ Working Link: https://filehub-cv.vercel.app/
 
 ![Screenshot (102)](https://github.com/user-attachments/assets/b902262f-7c98-4d19-819f-1be8679d42ab)
 
+---
+## 🛠 Tech Stack  
+
+### **Frontend**  
+- **Next.js 15** (React 19 & TypeScript)  
+- **Tailwind CSS** (with Tailwind Merge & Animations)  
+- **Radix UI** (Dialog, Select, Tooltip, Toast, etc.)  
+- **Lucide React** (Icons)  
+- **Recharts** (Data Visualization)  
+- **React Hook Form** (Form Handling & Validation)  
+- **Zod** (Schema Validation)  
+- **React Dropzone** (File Upload)  
+
+### **Backend & Storage**  
+- **Appwrite** (Node SDK for Database & Storage)  
+
+### **Tooling & Utilities**  
+- **ESLint & Prettier** (Code Formatting & Linting)  
+- **PostCSS** (CSS Processing)  
+- **Sonner / React Hot Toast** (Notifications)  
+- **Use Debounce** (Optimized State Management)  
+---
+
 ## 🚀 Getting Started
 
 ### 🛠 Installation
